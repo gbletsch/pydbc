@@ -9,7 +9,7 @@ setup(
     # Needed to actually package something
     packages=['pydbc'],
     # Needed for dependencies
-    install_requires=['numpy', 'pandas', 'os', 'dbfread'],
+    install_requires=['numpy', 'pandas', 'dbfread'],
     # *strongly* suggested for sharing
     version='0.1',
     # The license can be anything you like
