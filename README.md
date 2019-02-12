@@ -11,16 +11,26 @@ There are some dependencies which can't be installed through pip, namely `libffi
 sudo apt install libffi-dev
 ```
 
-This is my preferred way of sharing/storing/installing packages. Simply create a git repo of the project directory, and put it somewhere. Then, use pip to install it from that repo directly
+This is my preferred way of sharing/storing/installing packages. Use pip to install it from that repo directly.
 
 ```
-pip install git+https://github.com/gbletsch/pydbc.git#egg=pydbc
+pip install git+https://github.com/gbletsch/pydbc.git
+
 ```
+
+Or if, for some reason, you don't want to use git:
+
+```
+pip install https://github.com/gbletsch/pydbc/zipball/master
+```
+
 
 ## Example:
 
+The file needs to be saved loccaly.
+
 ```python
-file = '/home/gui/tcc_hemato_sus/raw_data_teste/RDAC1701.dbc'
+file = 'RDAC1701.dbc'
 df = read_dbc(file)
 print(df.iloc[:5, [0, 1, 5, 6])
 
